@@ -1,0 +1,9 @@
+.vscode
+/.idea
+cypress/report
+cypress/videos
+cypress/screenshots
+cypress/logs
+package-lock.json
+node_modules/
+

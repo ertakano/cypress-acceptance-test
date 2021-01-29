@@ -1,0 +1,11 @@
+{
+  "testFiles": "**/*.feature",
+  "ignoreTestFiles": "*.js",
+  "viewportWidth": 1024,
+  "viewportHeight": 768,
+  "defaultCommandTimeout": 10000,
+  "chromeWebSecurity": false,
+  "video": false,
+  "baseUrlHomol": "https://homolog.hostgator.com.br/",
+  "baseUrlAlpha": "https://alpha-financeiro.hostgator.com.br/"
+}
