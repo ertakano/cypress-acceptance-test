@@ -5,7 +5,7 @@
   "viewportHeight": 768,
   "defaultCommandTimeout": 10000,
   "chromeWebSecurity": false,
-  "video": false,
-  "baseUrlHomol": "https://homolog.hostgator.com.br/",
-  "baseUrlAlpha": "https://alpha-financeiro.hostgator.com.br/"
+  "video": true,
+  "baseUrl": "http://automationpractice.com/",
+  "urlLogin": "index.php?controller=authentication&back=my-account"
 }

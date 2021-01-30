@@ -1,5 +1,5 @@
 {
-  "name": "hostgator-acceptance-tests",
+  "name": "cypress-acceptance-test",
   "version": "1.0.0",
   "description": "",
   "scripts": {
@@ -8,7 +8,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "cypress-cucumber-preprocessor": "^4.0.0"
+    "cypress-cucumber-preprocessor": "^4.0.0",
+    "faker": "^5.2.0"
   },
   "cypress-cucumber-preprocessor": {
     "step_definitions": "cypress/support/steps",
@@ -18,5 +19,5 @@
       "filePrefix": "",
       "fileSuffix": ".cucumber"
     }
-  }
+  },
 }
