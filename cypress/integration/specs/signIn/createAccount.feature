@@ -6,13 +6,13 @@ Funcionalidade: Criar conta
   Quero criar uma conta
   Para poder realizar compras
  
-  @acessar_conta
+  @acessar_conta @ignore
   Cenário: Acessar formulário para abertura de conta
     Dado que o usuário esteja na tela de login
     Quando criar sua conta com um email válido
     Então deve acessar o formulário para criação da conta
 
-  @criar_conta @ignore
+  @criar_conta
   Cenário: Preencher formulário para abertura de conta
     Dado que o usuário esteja na tela de criação de conta
     E informe todos os dados solicitados

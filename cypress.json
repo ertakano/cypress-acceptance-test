@@ -6,6 +6,8 @@
   "defaultCommandTimeout": 10000,
   "chromeWebSecurity": false,
   "video": true,
-  "baseUrl": "http://automationpractice.com/",
-  "urlLogin": "index.php?controller=authentication&back=my-account"
+  "experimentalSourceRewriting": true,
+  "baseUrl": "http://automationpractice.com",
+  "urlSignIn": "/index.php?controller=authentication&back=my-account",
+  "urlMyAccount": "/index.php?controller=my-account"
 }
