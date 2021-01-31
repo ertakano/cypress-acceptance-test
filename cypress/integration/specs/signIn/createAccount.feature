@@ -9,7 +9,7 @@ Funcionalidade: Criar conta
   @acessar_conta
   Cenário: Acessar formulário para abertura de conta
     Dado que o usuário esteja na tela de login
-    Quando criar sua conta com o email "joshua7692@uorak.com"
+    Quando criar sua conta com um email válido
     Então deve acessar o formulário para criação da conta
 
   @criar_conta @ignore

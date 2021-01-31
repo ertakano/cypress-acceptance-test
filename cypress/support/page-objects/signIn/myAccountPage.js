@@ -21,13 +21,14 @@ export const getTitle = () => {
   return cy.get(TITLE_CREATE_AN_ACCOUNT);
 }
 
-export const accessCreateAccount = () => {
+export const accessCreateAccount = (email) => {
   cy.visit(URL);
   cy.get(TITLE_CREATE_ACCOUNT).should("be.visible");
   cy.get(FLD_EMAIL).type(email);
   cy.get(BTN_SUBMIT).should("be.visible").click();
   cy.get(TITLE_CREATE_AN_ACCOUNT).should("be.visible");
 }
+
 
 
 
