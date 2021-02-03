@@ -1,3 +1,5 @@
+import faker from "faker";
+
 // YOUR PERSONAL INFORMATION
 const TITLE_FORMS             = '#account-creation_form'
 const FLD_FIRST_NAME          = '#customer_firstname'
@@ -105,3 +107,23 @@ export const setAlias = (alias) => {
 export const clickRegister = () => {
   cy.get(BTN_SUBMIT).should("be.visible").click();
 }
+
+export const fillClientRegister = (firstName, lastName, email) => {
+  setFirstName(firstName);
+  setLastName(lastName);
+  getEmail().should("have.value", email);
+  setPassword(faker.internet.password());
+  setDateOfBirth("15", "7", "1990");
+  setFirstNameAddress(firstName);
+  setLastNameAddress(lastName);
+  setAddress(faker.address.streetName());
+  setAddress2(faker.address.secondaryAddress());
+  setCity(faker.address.city());
+  setZipCode("12345");
+  setCountry("21");
+  setState("California");
+  setAdditionalInfo(faker.lorem.sentence());
+  setHomePhone("11111111111");
+  setMobilePhone("11111111111");
+  setAlias(faker.internet.userName());
+};

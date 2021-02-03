@@ -7,18 +7,9 @@ import faker from 'faker'
 const email     = faker.internet.email();
 const firstName = faker.name.firstName();
 const lastName  = faker.name.lastName();
-const password  = faker.internet.password();
-const address   = faker.address.streetName();
-const address2  = faker.address.secondaryAddress();
-const city      = faker.address.city();
-const zipCode   = '12345';
-const info      = faker.lorem.sentence();
-const phone     = '11111111111';
-const alias     = faker.internet.userName();
 
 Before({ tags: "@criar_conta" }, () => {
   authenticationPage.accessCreateAccount(email);
-  cy.log(`email: ${email} and password: ${password}`);
 });
 
 // Cenário: Acessar formulário para abertura de conta
@@ -42,23 +33,7 @@ Given('que o usuário esteja na tela de criação de conta', () => {
 
 Given('informe todos os dados solicitados', () => {
   accountCreationPage.checkTitle(1);
-  accountCreationPage.setFirstName(firstName);
-  accountCreationPage.setLastName(lastName);
-  accountCreationPage.getEmail().should('have.value', email);
-  accountCreationPage.setPassword(password);
-  accountCreationPage.setDateOfBirth('15','7','1990');
-  accountCreationPage.setFirstNameAddress(firstName);
-  accountCreationPage.setLastNameAddress(lastName);
-  accountCreationPage.setAddress(address);
-  accountCreationPage.setAddress2(address2);
-  accountCreationPage.setCity(city);
-  accountCreationPage.setZipCode(zipCode);
-  accountCreationPage.setCountry('21');
-  accountCreationPage.setState('California');
-  accountCreationPage.setAdditionalInfo(info);
-  accountCreationPage.setHomePhone(phone);
-  accountCreationPage.setMobilePhone(phone);
-  accountCreationPage.setAlias(alias);
+  accountCreationPage.fillClientRegister(firstName, lastName, email);
 })
 
 When('registrar as informações', () => {

@@ -1,4 +1,3 @@
-const URL                     = Cypress.config("urlMyAccount")
 const TITLE_MY_ACCOUNT        = 'h1'
 const CENTER_COLLUM           = '#center_column'
 
